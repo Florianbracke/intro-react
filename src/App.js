@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useRef } from 'react';
-import TodoList from './TodoList';
+import TodoList from './components/TodoList';
 //import uuidv4 from 'uuid/v4'; -> id prevtodos = uuid/v4(  )
 
   function App() {
@@ -19,19 +19,32 @@ import TodoList from './TodoList';
       todoNameRef.current.value = null
     }
 
-    return (
+    return (  
     <>
-    <TodoList todos = {todos}/>
 
-      <input ref={todoNameRef} type='text' />
+    <div id='todoInput'>
       
-      <button onClick={handleAddTodo} >Add to do</button>
+      <h2>To-Do's!! </h2>
+      <div> <input ref={todoNameRef} type='text' /></div>
+
+      <br></br>
+      
+      <button onClick={handleAddTodo} >Add a to-do</button>
+ 
+      <br></br><br></br>
+
+      <div class='test'> <TodoList  todos = {todos}/></div>
+
+      <br></br> 
+
+      <div>0 left to do</div>
       
       <button>Clear complete todos</button>
-      
-      <div>0 left to do</div>
 
+    </div>
+    
     </>
+
     ) 
   }  
 export default App;

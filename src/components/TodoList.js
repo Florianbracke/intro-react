@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from './Todo';
+import Todo from './GenerateTodo';
 
 export default function TodoList({ todos }) {
     return (
@@ -8,3 +8,4 @@ export default function TodoList({ todos }) {
         })
     )
 }
+
